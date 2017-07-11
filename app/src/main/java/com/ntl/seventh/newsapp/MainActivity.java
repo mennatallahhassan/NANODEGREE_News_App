@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
         if (isConnected) {
             getLoaderManager().initLoader(1, null, loaderCallbacks);
+        } else {
+            Toast.makeText(getApplicationContext(), "Please check your internet connection", Toast.LENGTH_LONG).show();
         }
 
     }
